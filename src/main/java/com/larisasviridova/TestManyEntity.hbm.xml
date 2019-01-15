@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.larisasviridova.TestManyEntity" table="TestMany" schema="dbo" catalog="Sample1">
+        <id name="code">
+            <column name="Code" sql-type="int"/>
+        </id>
+        <property name="fam">
+            <column name="Fam" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
