@@ -109,7 +109,7 @@ public class MainController {
         testEntity.setName("Ура!!!!!!!!!!!!!");
         userService.flush();*/
 
-        List <TestEntity> people = userService.getByNameLike("11");
+        List <TestEntity> people = userService.getByNameLike("12");
         model.addObject("people",people);
         return model;
     }
