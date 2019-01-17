@@ -23,7 +23,5 @@ public class UserService {
     TestEntity getOne(Long code) {return testEntityRepository.getOne(code);} //проверяет существование объекта, если нет = null
     TestEntity findByCode(int code) {return testEntityRepository.findByCode(code);}
 
-    @Autowired
-    TestManyEntityRepository testManyEntityRepository;
 
 }
