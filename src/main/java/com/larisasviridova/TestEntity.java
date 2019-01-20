@@ -46,7 +46,12 @@ public class TestEntity {
     //private Set<TestManyEntity> testManyEntities = new HashSet<TestManyEntity>();
     private Set<TestManyEntity> testManyEntities;
     //public Set<TestManyEntity> getTestManyEntities(){return testManyEntities;}
-   public void setTestManyEntities(Set<TestManyEntity> testManyEntities){this.testManyEntities=testManyEntities;}
+
+    public Set<TestManyEntity> getTestManyEntities() {
+        return testManyEntities;
+    }
+
+    public void setTestManyEntities(Set<TestManyEntity> testManyEntities){this.testManyEntities=testManyEntities;}
 
     @Override
     public boolean equals(Object o) {

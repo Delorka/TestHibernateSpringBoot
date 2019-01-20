@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
+import java.util.Set;
 
 
 @RestController
@@ -110,6 +111,7 @@ public class MainController {
         userService.flush();*/
 
         List <TestEntity> people = userService.getByNameLike("111");
+        Set<TestManyEntity> testManyEntities =  people.get(0).getTestManyEntities();
         model.addObject("people",people);
         return model;
     }
