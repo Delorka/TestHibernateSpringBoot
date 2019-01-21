@@ -111,7 +111,7 @@ public class MainController {
         userService.flush();*/
 
         List <TestEntity> people = userService.getByNameLike("111");
-        Set<TestManyEntity> testManyEntities =  people.get(0).getTestManyEntities();
+        //Set<TestManyEntity> testManyEntities =  people.get(0).getTestManyEntities();
         model.addObject("people",people);
         return model;
     }

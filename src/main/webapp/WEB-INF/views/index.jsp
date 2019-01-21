@@ -46,6 +46,17 @@
       <br/>
   </c:forEach>
 
+ <%-- <br/>
+  <br/>
+  <jsp:text>Repository:</jsp:text>
+  <c:forEach items="${testManyEntities}" var="ts">
+      ${ts.getCode()}
+      ${ts.getFam()}
+      ${ts.getCodeTest()}
+      <br/>
+  </c:forEach>
+--%>
+
   </tr>
 
   </body>

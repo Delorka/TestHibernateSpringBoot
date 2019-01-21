@@ -1,7 +1,11 @@
 package com.larisasviridova;
 
+import jdk.nashorn.internal.objects.annotations.Getter;
+import jdk.nashorn.internal.objects.annotations.Setter;
+
 import javax.persistence.*;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -44,12 +48,9 @@ public class TestEntity {
 
     @OneToMany(mappedBy="testEntity", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
     //private Set<TestManyEntity> testManyEntities = new HashSet<TestManyEntity>();
-    private Set<TestManyEntity> testManyEntities;
-    //public Set<TestManyEntity> getTestManyEntities(){return testManyEntities;}
+            Set<TestManyEntity> testManyEntities;
 
-    public Set<TestManyEntity> getTestManyEntities() {
-        return testManyEntities;
-    }
+    public Set<TestManyEntity> getTestManyEntities() {return testManyEntities;}  //org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
 
     public void setTestManyEntities(Set<TestManyEntity> testManyEntities){this.testManyEntities=testManyEntities;}
 
